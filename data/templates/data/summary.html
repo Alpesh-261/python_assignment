@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summary Report</title>
+    <style>
+        .header {
+            background-color: black;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .pagination{
+            display: flex;
+            align-items: center;
+            background: #fff;
+            color: #383838;
+            padding: 10px 40px;
+            border-radius: 6px;
+        }
+        ul{
+            margin:20px 30px;
+        }
+
+        ul li{
+            display: inline-block;
+            margin: 0 10px;
+            background: #ccc;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 45px;
+            cursor:pointer;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+   
+
+        <div class="header">
+            <h1>Summary Report</h1>
+        </div>
+    
+        <table id="summaryTable">
+            
+            <tbody>
+                {{ summary|safe }}
+            </tbody>
+        </table>
+
+    
+
+</body>
+</html>
